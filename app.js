@@ -1,4 +1,6 @@
 let btn = document.querySelector('#btnNo');
+let btnYes = document.querySelector('#btnSi');
+btnYes.addEventListener("click", aceptar);
 btn.addEventListener("mouseover", movimiento);
 
 function movimiento(){
@@ -11,4 +13,8 @@ function movimiento(){
     }else if(btn.classList.contains('posicion4')){
         btn.classList.replace('posicion4', 'posicion1');
     }
+}
+
+function aceptar(){
+    window.location.href = 'acepto.html';
 }
