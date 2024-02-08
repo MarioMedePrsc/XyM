@@ -1,0 +1,42 @@
+body{
+    font-family: "Cooper Black", "Arial";
+}
+#btnNo{
+    padding: 10px 20px;
+    background-color: aqua;
+    border: none;
+    color: white;
+    
+}
+#btnSi{
+    padding: 10px 20px;
+    background-color: aqua;
+    border: none;
+    color: white;
+}
+
+.app{
+    width: 200px;
+    margin: 0px auto;
+}
+
+.posicion1{
+    padding: 10px 20px;
+    
+}
+
+.posicion2{
+    position: absolute;
+    top: 30px;
+    right: 12px;
+}
+.posicion3{
+    position: absolute;
+    bottom: 20px;
+    right: 19px;
+}
+.posicion4{
+    position: absolute;
+    top: 17px;
+    right: 54px;
+}
