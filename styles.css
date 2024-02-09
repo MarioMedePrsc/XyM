@@ -1,10 +1,17 @@
+:root {
+    --color-primario: beige;
+    --color-secundario: #FFA07A;
+    --color-botones:#FF0000;
+    --color-transparente: rgba(128, 128, 128, 0.5);
+  }
+
 body{
     font-family: "Cooper Black", "Arial";
-    background-color: 	#ffa0ce;
+    background-color: var(--color-primario);
 }
 #btnNo{
     padding: 10px 20px;
-    background-color: #FF0000;
+    background-color: var(--color-botones);
     border: none;
     color: white;
     font-family: "Cooper Black", "Arial";
@@ -12,7 +19,7 @@ body{
 }
 #btnSi{
     padding: 10px 20px;
-    background-color: #FF0000;
+    background-color: var(--color-botones);
     border: none;
     color: white;
     font-family: "Cooper Black", "Arial";
@@ -26,7 +33,7 @@ body{
     width: 80%;
     max-width: 800px;
     margin: 0 auto;
-    background-color: #FFA07A;
+    background-color: var(--color-secundario);
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
@@ -50,24 +57,24 @@ body{
     border-radius: 10px;
 }
 .imgLetras{
-    background-color: rgba(128, 128, 128, 0.5);
+    background-color: var(--color-transparente);
     border-radius: 10px;
 }
 .bodyAcepto{
     height: 100vh;
     margin: 0;
-    
-    
-    background-color: beige;
+    background-color: var(--color-primario);
 }
 .imgCar{
     padding-top: 5px;
     margin: 0;
+    border-radius: 10px 10px 10px 10px;
+    
 }
 .contenedorTarjeta{
-    padding: 0px;
+    padding: 10px;
     margin: 2px;
-    background-color: rgba(221, 20, 20, 0.5);
+    
 }
 .zonaCartas{
     padding: 0;
@@ -75,6 +82,9 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center; 
+}
+.card-text{
+    text-align: center;
 }
 
 .posicion1{
