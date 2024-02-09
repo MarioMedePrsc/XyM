@@ -49,7 +49,10 @@ body{
     max-width: 800px;
     border-radius: 10px;
 }
-
+.imgLetras{
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 10px;
+}
 .bodyAcepto{
     height: 100vh;
     margin: 0;
