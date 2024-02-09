@@ -1,10 +1,27 @@
 :root {
     --color-primario: beige;
+    --color-secundario: #F09CA2;
+    --color-botones:#AC3834;
+    --color-transparente: rgba(128, 128, 128, 0.5);
+    --color-letras: #881D1D;
+    --color-texto-morado: #9e1ab6;
+    --color-cuadro-morado: #E8BCE2;
+  }
+
+  .cuadroMorado{
+    color: var(--color-letras);
+    background-color: var(--color-cuadro-morado);
+  }
+
+  /*COLORES
+  --color-primario: beige;
     --color-secundario: #FFA07A;
     --color-botones:#FF0000;
     --color-transparente: rgba(128, 128, 128, 0.5);
-  }
-
+  */
+.textoPregunta{
+    color: var(--color-letras);
+}
 body{
     font-family: "Cooper Black", "Arial";
     background-color: var(--color-primario);
