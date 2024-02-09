@@ -72,8 +72,11 @@ body{
     
 }
 .contenedorTarjeta{
-    padding: 10px;
-    margin: 2px;
+    background-color:white;
+    padding:10px 10px 50px 10px;
+    border:1px solid #BFBFBF;
+    box-shadow:10px 10px 30px rgba(0, 0, 0, 0.8);
+    margin: 10px 0px 0px 10px;
     
 }
 .zonaCartas{
@@ -86,6 +89,22 @@ body{
 .card-text{
     text-align: center;
 }
+
+
+.RotarIzq {
+    transform:rotate(5deg);
+    -ms-transform:rotate(5degg); /* IE9 */
+    -webkit-transform:rotate(5deg); /* Safari y Chrome */
+    -moz-transform:rotate(5deg); 
+}
+ 
+.RotarDer {
+    transform:rotate(-5deg);
+    -ms-transform:rotate(-5deg); /* IE9 */
+    -webkit-transform:rotate(-5deg); /* Safari y Chrome */
+    -moz-transform:rotate(-5deg); 
+}
+
 
 .posicion1{
     padding: 10px 20px;
