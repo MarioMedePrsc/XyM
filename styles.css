@@ -30,8 +30,32 @@ body{
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
+.carrusel{
+    height: 800px;
+    width: 100%;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.imgCarrusel{
+    display: flex;
+    margin: auto;
+    max-height: 800px;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.bodyAcepto{
+    height: 100vh;
+    margin: 0;
+    
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+}
 
 
 .posicion1{
