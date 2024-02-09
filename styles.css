@@ -32,13 +32,15 @@ body{
     margin-top: 20px;
     margin-bottom: 10px;
 }
-
-.carrusel{
-    height: 800px;
-    width: 100%;
-    border-radius: 10px;
+.centrar{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
+}
+.carrusel{
+    max-height: 800px;
+    max-width: 800px;
 }
 .imgCarrusel{
     display: flex;
