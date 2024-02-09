@@ -61,13 +61,14 @@ body{
     background-color: beige;
 }
 .imgCar{
-    padding: 5px;
+    padding-top: 5px;
     margin: 0;
 }
 .contenedorTarjeta{
     padding: 0px;
     margin: 2px;
     background-color: rgba(221, 20, 20, 0.5);
+    width: 18rem;
 }
 .zonaCartas{
     padding: 0;
@@ -76,6 +77,8 @@ body{
     flex-direction: row;
     justify-content: center; 
 }
+
+
 
 .posicion1{
     padding: 10px 20px;
