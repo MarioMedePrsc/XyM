@@ -84,6 +84,7 @@
 {
     width: 100%;
     background-color: #E0BBE4; /* Violeta Claro */
+    color: #2c1041;
 }
 .title
 {
@@ -99,9 +100,18 @@
     color: #f9f9f9;
     padding: 5%;
 }
-
-
 .contenido
 {
     background-color: #E0BBE4
+}
+/* Estilos opcionales para personalizar la línea */
+.linea-separadora {
+    border: none; /* Elimina el borde predeterminado */
+    height: 1px; /* Ajusta la altura de la línea */
+    background-color: #333; /* Cambia el color de la línea */
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+/* Estilo adicional para justificar el texto */
+.text-justify {
+    text-align: justify;
 }
