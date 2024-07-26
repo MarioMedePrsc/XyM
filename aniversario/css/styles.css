@@ -68,6 +68,10 @@
     gap: 1rem; /* Opcional: Espacio entre los elementos del grid */
     
 }
+.grid-1col {
+    display: grid;
+    grid-template-columns: 1fr; /* Define una sola columna que ocupa todo el espacio disponible */
+}
 
 /* Estilos adicionales para los elementos dentro del grid */
 .grid-1 > div {
@@ -114,4 +118,10 @@
 /* Estilo adicional para justificar el texto */
 .text-justify {
     text-align: justify;
+}
+.img-full-width {
+    width: 100%;
+    max-width: 400px;
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px;
 }
