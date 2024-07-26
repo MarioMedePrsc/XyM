@@ -4,24 +4,71 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>XyM San Valentín</title>
+        <title>Aniversario</title>
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
-    <body>
-        <div class="app">
-            
-                <h1 class="textoPregunta" id="title">Quieres ser mi San Valentín?</h1>
-                <div class="botones">
-                    <button id="btnSi" class="btn">SÍ</button>
-                    <button id="btnNo" class="posicion1 btn">NO</button>
-                </div>
-            
+    <body class="body">
+        <div id="navbar" class="title text-center" >
+            <h1>Introducción</h1>
+
         </div>
+        <div class="grid-1 content" id="content">
+            <!--INTRODUCCIÓN-->
+            <div id="introduction" class="contenido" >
+                <div id="intro-title"  >
+                    <p >aa</p>
+                </div>
+            </div>
+            <!--ENERO-->
+            <div id="Enero" class="contenido" style="display: none;">
+                <div id="intro-body" >
+                    <p>aa</p>
+                </div>
+                
+            </div> 
+        </div>
+        <div id="footer" class="footer text-center" >
+            <div>❤️❤️❤️ 02/08/2023 ❤️❤️❤️</div>
+
+        </div>
+        
+        <!--Modal para iniciar-->
+        <div id="modal-intro" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Antes de empezar</h2>
+                    <span class="close" onclick="closeModal('modal-intro')">&times;</span>
+                    
+                </div>
+                <div class="modal-body">
+                    Antes de empezar a jugar asegurate de tener la libreta de fotografías y a tu novio a la mano.
+                    <br/>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="closeModal('modal-intro')">Sí los tengo a la mano</button>
+                </div>
+            </div>
+        </div>
+        
 
         <script>
+            // Declaración de variable global
+            var globalAvance = 0;
+            // Función para abrir el modal
+            function openModal(idModal) {
+                var modal = document.getElementById(idModal);
+                modal.classList.add("show");
+            }
+            // Función para cerrar el modal
+            function closeModal(idModal) {
+                var modal = document.getElementById(idModal);
+                modal.classList.remove("show");
+            }
             document.addEventListener("DOMContentLoaded", function() {
-                document.getElementById("title").textContent = "Aniversario";
+                //document.getElementById("title").textContent = "Aniversario";
+                openModal("modal-intro");
             });
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
