@@ -147,3 +147,63 @@
     
     
 }
+/*IMAGEN DE BACKGROUND TRANSPARENTE*/
+.background-transparent {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ajusta la altura según sea necesario */
+    background-image: url('../img/4.jpg'); /* Reemplaza con la ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.background-transparent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Cambia el color y la opacidad según sea necesario */
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.contentWithBackground {
+    position: relative;
+    color: white;
+    padding: 20px;
+    z-index: 2;
+    text-align: center;
+}
+/*IMAGEN DE BACKGROUND TRANSPARENTE 9*/
+.background-transparent-9 {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ajusta la altura según sea necesario */
+    background-image: url('../img/9.jpg'); /* Reemplaza con la ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.background-transparent-9::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Cambia el color y la opacidad según sea necesario */
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.contentWithBackground-9 {
+    position: relative;
+    color: white;
+    padding: 20px;
+    z-index: 2;
+    text-align: center;
+}
