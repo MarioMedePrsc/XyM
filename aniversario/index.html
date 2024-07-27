@@ -63,9 +63,11 @@
                         <p class="text-justify">
                             aaa
                         </p>
+                        <button onclick="getLocation()">Obtener Ubicación</button>
+                        <p id="location"></p>
                     </div>
-                    <div >
-                        
+                   
+                        <img class="img-full-width" src="img/3.jpg"/>
                     </div>
                     
                 </div>
@@ -317,6 +319,26 @@
             
         </div>
         <div id="footer" class="footer text-center" >
+            
+            <div>Oración Final</div>
+            <div id="lblPalabraActual"></div>
+            <div class="row frase mt-5">
+                <div class="col-1 mr-auto"><button class="btn-empty" id="1" onclick="controlFrase(this)">_____</button></div>
+                <div class="col-1 mr-auto"><button class="btn-empty" id="2" onclick="controlFrase(this)">_____</button></div>
+                <div class="col-1 mr-auto"><button class="btn-empty" id="3" onclick="controlFrase(this)">_____</button></div>
+                <div class="col-1 mr-auto"><button class="btn-empty" id="4" onclick="controlFrase(this)">_____</button></div>
+                <div class="col-1 mr-auto"><button class="btn-empty" id="5" onclick="controlFrase(this)">_____</button></div>
+                <div class="col-1 mr-auto"><button class="btn-empty" id="6" onclick="controlFrase(this)">_____</button></div>
+            </div>
+            <div class="row frase mt-5"  >
+                <div class="col-1 mr-auto "><button class="btn-empty" id="7" onclick="controlFrase(this)">_____</button></div>
+                <div class="col-1 mr-auto "><button class="btn-empty" id="8" onclick="controlFrase(this)">_____</button></div>
+                <div class="col-1 mr-auto "><button class="btn-empty" id="9" onclick="controlFrase(this)">_____</button></div>
+                <div class="col-1 mr-auto "><button class="btn-empty" id="10" onclick="controlFrase(this)">_____</button></div>
+                <div class="col-1 mr-auto "><button class="btn-empty" id="11" onclick="controlFrase(this)">_____</button></div>
+                <div class="col-1 mr-auto "><button class="btn-empty" id="12" onclick="controlFrase(this)">_____</button></div>
+            </div>
+            <br/>
             <div>❤️❤️❤️ 02/08/2023 ❤️❤️❤️</div>
 
         </div>
@@ -335,6 +357,7 @@
                     
                 </div>
                 <div class="modal-footer">
+                    
                     <button type="button" class="btn btn-primary" onclick="closeModal('modal-intro')">Sí los tengo a la mano</button>
                 </div>
             </div>
@@ -345,6 +368,36 @@
         <script>
             // Declaración de variable global
             var globalAvance = 1;
+            var espacios = 
+            [
+                '1',
+                '2',
+                '3',
+                '4',
+                '5',
+                '6',
+                '7',
+                '8',
+                '9',
+                '10',
+                '11',
+                '12'
+            ];
+            var fraseFinal =
+            [
+                'buscando',
+                'final',
+                'estuvo',
+                'es que',
+                'que',
+                'siempre',
+                'Lo',
+                'estuviste',
+                'eso',
+                'al',
+                'mejor',
+                'a tu lado'
+            ];
             var nameInpt =
             [
                 'resInicio',
@@ -392,6 +445,54 @@
                 'Julio',
                 'Final'
             ];
+            var palabraActual = "";
+            
+            //Función para controlar la frase 
+            function controlFrase(obj)
+            {
+               
+                var valorVacio = "_____"
+                if(obj.innerHTML == valorVacio)
+                {
+                    if(palabraActual == "")
+                    {
+                        obj.blur();
+                        return ;
+                    }
+                    obj.innerHTML = palabraActual;
+                    palabraActual = "";
+                    obj.blur();
+                }else
+                {
+                    if(palabraActual == "")
+                    {
+                        palabraActual = obj.innerHTML;
+                        obj.innerHTML = valorVacio;
+                        obj.blur();
+                    }else
+                    {
+                        var aux = "";
+                        aux = palabraActual;
+                        palabraActual = obj.innerHTML;
+                        obj.innerHTML = aux;
+                        obj.blur();
+                    }
+                }
+                mostrarPalabraActual();
+
+            }
+            //Función para mostrar palabra actual
+            function mostrarPalabraActual()
+            {
+                var obj = document.getElementById("lblPalabraActual");
+                if(palabraActual != "")
+                {
+                    obj.innerHTML = 'Coloca: <strong style= "font-size: 1.2rem; color: orange;">' + palabraActual+'</strong>';
+                }else
+                {
+                    obj.innerHTML = "";
+                }
+            }
             // Función para actualizar el juego mostrando todos los meses
             function actualizarJuego() {
                 // Recorre el array de meses
@@ -448,6 +549,71 @@
                 var modal = document.getElementById(idModal);
                 modal.classList.remove("show");
             }
+            
+            //FUNCION DE LOCALIZACIÓN
+            //CASA 25.80331294454977 -100.37843517951954
+            //Cataluna 25.66802870731342 -100.30630258981623
+            //Bodeguita 25.79443048406677, -100.37665557760896
+            const targetLat = 25.80331294454977;
+            const targetLon = -100.37843517951954;
+            
+
+            function getLocation() 
+            {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition, showError);
+                } else {
+                    document.getElementById("location").innerHTML = "La geolocalización no es soportada por este navegador.";
+                }
+            }
+
+            function showPosition(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                var objLocation = document.getElementById("location");
+
+                if (isWithinRange(latitude, longitude, targetLat, targetLon)) 
+                {
+                    objLocation.innerHTML = "Perfecto, ya estamos en Cataluna";
+                }else
+                {
+                    objLocation.innerHTML = "No te encuentras en Cataluna, dirigete a Cataluna para continuar";
+                }
+            }
+            
+            function isWithinRange(latitude1, longitude1, latitude2, longitude2) {
+                unit = 'kilometers'
+                let theta = longitude1 - longitude2;
+                let distance = 60 * 1.1515 * (180/Math.PI) * Math.acos(
+                    Math.sin(latitude1 * (Math.PI/180)) * Math.sin(latitude2 * (Math.PI/180)) + 
+                    Math.cos(latitude1 * (Math.PI/180)) * Math.cos(latitude2 * (Math.PI/180)) * Math.cos(theta * (Math.PI/180))
+                );
+                var cantLejos = distance * 1.609344;
+                
+                if (cantLejos <= 0.3) {
+                    return true;
+                }
+                return false;
+            }
+
+            function showError(error) 
+            {
+                switch(error.code) {
+                    case error.PERMISSION_DENIED:
+                        document.getElementById("location").innerHTML = "El usuario denegó la solicitud de geolocalización.";
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        document.getElementById("location").innerHTML = "La información de ubicación no está disponible.";
+                        break;
+                    case error.TIMEOUT:
+                        document.getElementById("location").innerHTML = "La solicitud para obtener la ubicación ha caducado.";
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        document.getElementById("location").innerHTML = "Se ha producido un error desconocido.";
+                        break;
+                }
+            }
+
             //Funcion cuando carga la página
             document.addEventListener("DOMContentLoaded", function() {
                 //document.getElementById("title").textContent = "Aniversario";
