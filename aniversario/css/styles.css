@@ -207,3 +207,68 @@
     z-index: 2;
     text-align: center;
 }
+/*IMAGEN DE BACKGROUND TRANSPARENTE 34*/
+.background-transparent-34 {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ajusta la altura según sea necesario */
+    background-image: url('../img/34.jpg'); /* Reemplaza con la ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.background-transparent-34::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Cambia el color y la opacidad según sea necesario */
+    z-index: 1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.contentWithBackground-34 {
+    position: relative;
+    color: white;
+    padding: 20px;
+    z-index: 2;
+    text-align: center;
+}
+/*IMAGEN DE BACKGROUND TRANSPARENTE 34*/
+.background-transparent-36 {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ajusta la altura según sea necesario */
+    background-image: url('../img/36.jpg'); /* Reemplaza con la ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.background-transparent-36::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Cambia el color y la opacidad según sea necesario */
+    z-index: 1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.contentWithBackground-36 {
+    position: relative;
+    color: white;
+    padding: 20px;
+    z-index: 2;
+    text-align: center;
+}
+
